@@ -1,0 +1,16 @@
+# Build output: huge, and cargo rebuilds it anytime
+/target
+
+# Secrets and local data: never commit
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite
+*.vault
+*.key
+*.pem
+
+# Editor and OS clutter
+*.swp
+.DS_Store
