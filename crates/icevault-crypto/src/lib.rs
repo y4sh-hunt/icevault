@@ -1,14 +1,12 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+//! Cryptographic core of icevault. See docs/CRYPTO_DESIGN.md.
+//!
+//! No custom cryptography: this crate only assembles audited primitives.
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+mod cipher;
+mod encstring;
+mod error;
+mod generator;
+mod kdf;
+mod keys;
+mod random;
+mod secret;
