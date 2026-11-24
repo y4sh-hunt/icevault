@@ -12,3 +12,5 @@ mod random;
 mod secret;
 
 pub use error::{CryptoError, Result};
+
+pub use secret::{ExposeSecret, KEY_LEN, SecretKey, SecretSlice, SecretString};
