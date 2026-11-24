@@ -10,3 +10,5 @@ mod kdf;
 mod keys;
 mod random;
 mod secret;
+
+pub use error::{CryptoError, Result};
