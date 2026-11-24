@@ -99,7 +99,7 @@ means lost data (see THREAT_MODEL, section 4).
 
 ## 9. Handling secrets in code
 
-- Secret types do not implement `Debug`, `Display`, or `Clone`.
+- Secret types never print their value: `Debug` shows `[REDACTED]`, and they have no `Display` or `Clone`.
 - Wiped on drop (`zeroize`).
 - Comparisons of secret values use constant time.
 - Every decryption failure returns one generic error.
